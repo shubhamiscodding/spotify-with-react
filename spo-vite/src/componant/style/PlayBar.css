@@ -1,0 +1,12 @@
+.play{
+    width: 100%;
+    background-color: #181818;
+    height: 60px;
+    grid-column: 1/span 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .play .img-1{
+    width: 500px;
+  }

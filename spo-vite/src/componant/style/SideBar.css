@@ -1,0 +1,80 @@
+
+  .side_bar{
+    background-color: black;
+    width: 200px;
+    height: 100%;
+  }
+  .side_bar .logo{
+    margin-top: 25px;
+    margin-left: 15px;
+    width: 130px;
+  }
+  .nav-button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .nav-button>p{
+    margin-top: 3px;
+    margin-left: 20px;
+  }
+  .nav-button .option{
+    margin-top: 35px;
+    margin-left: 20px;
+    display: grid;
+    grid-template-columns: 50px 150px;
+    align-items: center;
+  }
+  .option p{
+    text-align: start;
+  }
+  .option img{
+    width: 22px;
+  }
+  .option1{
+    margin-top: 10px;
+    margin-left: 20px;
+    display: grid;
+    grid-template-columns: 50px 150px;
+    align-items: center;
+  }
+  .option1 p{
+    text-align: start;
+  }
+  .option1 img{
+    width: 22px;
+  }
+  .install-option{
+    margin-left: 20px;
+    margin-top: 18px;
+    display: grid;
+    grid-template-columns: 50px 150px;
+    align-items: center;
+  }
+  .install-option img{
+    width: 25px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
