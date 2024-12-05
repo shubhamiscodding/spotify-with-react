@@ -1,0 +1,55 @@
+.song{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+  .top{
+    display: grid;
+    grid-template-columns: auto 55vw;
+    margin-top: 15px;
+  }
+  .top .imgs{
+    width: 90px;
+  }
+  .top .profile{
+    margin-left: 72%;
+  }
+  .song>p{
+    margin-top: 15px;
+    font-size: 25px;
+  }
+  .playlist{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+  }
+  .play-op{
+    background-color: #303030;
+    display: flex;
+    margin-top: 15px;
+    align-items: center;
+  }
+  .play-op img{
+    width: 60px;
+  }
+  .play-op p{
+    margin-left: 10%;
+  }
+  .singer{
+    display: grid;
+    grid-template-columns: 160px 160px 160px 160px 160px 160px;
+    gap: 10px;
+  }
+  .singer-list{
+    display: flex;
+    flex-direction: column;
+    background-color: #292828;
+    padding: 10px;
+    border-radius: 15px;
+  }
+  .singer-list img{
+    width: 140px;
+  }
+  .singer-list p{
+    padding-top: 10px;
+  }
