@@ -12,9 +12,17 @@ import './css/Header.css'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
   <div className="contain">
+  <div className="page1">
   <SideBar />
-  <Header />
+  </div>
+  <div className="page">
+    <div className="head">
+      <Header />
+    </div>
+    <div className="mainn">
   <MainPage />
+  </div>
+  </div>
   </div>
   </StrictMode>,
 )

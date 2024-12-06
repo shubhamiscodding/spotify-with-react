@@ -51,6 +51,7 @@ function MainPage(){
         ]
     return(
     <>
+    <div className="main">
     <div className="box">
             {vedio.map((i)=>(
                 <div key={i.id} className="flex">
@@ -67,6 +68,7 @@ function MainPage(){
                     </div>
                 </div>
             ))}
+    </div>
     </div>
     </>
     )
