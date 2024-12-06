@@ -1,0 +1,29 @@
+.box{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin-top: 2%;
+    margin-left: 2%;
+    gap: 1%;
+}
+.flex{
+    width: 252px;
+    margin-top: 6px;
+}
+.tittle img{
+    height: 35px;
+}
+.tittle{
+    display: flex;
+    gap: 8px;
+    font-size: 17px;
+    margin-top: 2px;
+}
+.info{
+    padding-left: 35px;
+    padding-top: 10px;
+    font-size: 13px;
+}
+.info img{
+    width: 12px;
+    margin-left: 5px;
+}
