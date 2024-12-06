@@ -6,6 +6,8 @@
     background-color: black;
     font-size: 15px;
     grid-row: 1/span 2;
+    overflow-y: scroll; 
+    height: 100%;
 }
 .logo{
     margin-top: 15px;
