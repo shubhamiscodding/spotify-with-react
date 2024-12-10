@@ -3,8 +3,8 @@ import { useState } from "react";
 
 function MainPage(){
     
-    const getPosts = async () => {
-        const response = await fetch("http://localhost:3000/vedio", {
+    const getPosts =  () => {
+        const response =  fetch("https://spotify-with-react.onrender.com/vedio", {
             method : "GET"
         });
         return response.json();
