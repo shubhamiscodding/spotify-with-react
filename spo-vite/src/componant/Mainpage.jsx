@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { useEffect } from "react";
 
 function Mainpage(){
 
@@ -9,14 +11,20 @@ function Mainpage(){
         { id:5, name: "dance", img_url: "https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/10.spotify-clone/assets/image2.png"},
     ]
 
-    let singers=[
-        {id:1, url:"https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/10.spotify-clone/assets/image9.png", tittle:"weekly motivation"},
-        {id:1, url:"https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/10.spotify-clone/assets/image8.png", tittle:"MEDITATION SELF"},
-        {id:1, url:"https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/10.spotify-clone/assets/image7.png", tittle:"WORD BEYOND ACT.."},
-        {id:1, url:"https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/10.spotify-clone/assets/image6.png", tittle:"THE ALEXA SHOW"},
-        {id:1, url:"https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/10.spotify-clone/assets/image5.png", tittle:"THE STROIES OF MA..."},
-        {id:1, url:"https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/10.spotify-clone/assets/image10.png", tittle:"MOTIVATION DAILY"},
-    ]
+
+    const getPosts = async () => {
+        const response = await fetch("http://localhost:3000/singers",{
+            method : "GET",
+        })
+        return response.json();
+    }
+
+    const [data,setData] = useState([]);
+
+    useEffect(() => {
+        getPosts().then((Posts) => setData(Posts))
+    },[])
+
     return(
         <>
         <div className='song'>
@@ -32,12 +40,12 @@ function Mainpage(){
                     <p>{i.name}</p>
                     </div>
               )
-              )
+              )                                                          
               }
           </div>
           <p>show you might Liked</p>
           <div className='singer'>
-          {singers.map((j) => (
+          {data.map((j) => (
                 <div key={j.id} className="singer-list">
                     <img src={j.url} />
                     <p>{j.tittle}</p>
