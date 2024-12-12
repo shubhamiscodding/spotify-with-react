@@ -1,33 +1,100 @@
-.main{
-    height: 100%;
-    background-color: #181818;
+.num{
+  margin-top: 30px;
+  margin-left: 100px;
+  color: #333;
+  background-color: orangered;
+  width: 380px;
 }
-.box{
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    margin-top: 2%;
-    margin-left: 2%;
-    gap: 3%;
+.num input{
+  margin-left: 50px;
 }
-.flex{
-    width: 252px;
-    margin-top: 15px;
-}
-.tittle img{
-    height: 35px;
-}
-.tittle{
+.main {
+    width: 100vw;
+    height: 100vh;
     display: flex;
-    gap: 8px;
-    font-size: 17px;
-    margin-top: 2px;
-}
-.info{
-    padding-left: 35px;
-    padding-top: 10px;
-    font-size: 13px;
-}
-.info img{
-    width: 12px;
-    margin-left: 5px;
-}
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    margin-top: 25px;
+  }
+  
+  .box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    width: 80%; /* Adjust width for centering */
+    max-width: 1200px;
+    padding: 5px;
+  }
+  
+  .ve {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .ve img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  .ve:hover {
+    transform: scale(1.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .write {
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: background-color 0.3s ease;
+  }
+  
+  .write h3 {
+    font-size: 16px;
+    color: #333;
+    margin: 0 0 10px;
+    line-height: 1.4;
+    font-weight: bold;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .write p {
+    font-size: 14px;
+    color: #555;
+    margin: 0 0 10px;
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .write small {
+    font-size: 12px;
+    color: #888;
+  }
+  
+  .write:hover {
+    background-color: #f0f0f0;
+  }
+  
+  @media (max-width: 768px) {
+    .box {
+      grid-template-columns: 1fr;
+    }
+  
+    .ve img {
+      height: 200px;
+    }
+  }
+  

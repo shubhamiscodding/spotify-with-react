@@ -54,3 +54,6 @@
 .sugg p:hover{
     background-color: #d1d1d1;
 }
+button{
+    background-color: transparent;
+}

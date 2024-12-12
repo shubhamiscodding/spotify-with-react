@@ -1,36 +1,110 @@
-.side-section{
+.side-section {
     display: flex;
     flex-direction: column;
     height: 100vh;
     width: 250px;
-    background-color: black;
+    background-color: #181818;
     font-size: 15px;
-    grid-row: 1/span 2;
-    overflow-y: scroll; 
-    height: 100%;
+    color: white;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #555 #181818;
 }
-.logo{
-    margin-top: 15px;
-    margin-left: 5px;
-}
-.logo1{
-    margin-left: 15px;
-}
-.option-icon{
-    margin-left: 10px;
-    margin-top: 8px;
-}
-.icons{
-    display: grid;
-    grid-template-columns: 50px auto;
+
+.logo {
+    display: flex;
     align-items: center;
-    margin-top: 5px;
+    gap: 10px;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    background-color: #181818;
+    z-index: 10;
+    border-bottom: 1px solid #333;
 }
-.icons img{
+
+.logo1 {
+    margin-left: 10px;
+    height: 30px;
+}
+
+.option-icon, .option-icon3 {
+    padding: 20px 10px 10px 15px;
+}
+
+.iii {
+    display: grid;
+    grid-template-columns: 40px auto;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.iii:hover {
+    background-color: #333;
+}
+
+.icons img {
     width: 28px;
+    height: 28px;
+    object-fit: cover;
 }
-.line{
-    margin-top: 15px;
-    margin-right: 10px;
-    opacity: 0.5;
+
+.icons p {
+    margin: 0;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.icons p:hover {
+    color: white;
+}
+
+.line {
+    margin: 10px 0;
+    border: 0.5px solid #444;
+}
+
+.side-section::-webkit-scrollbar {
+    width: 8px;
+}
+
+.side-section::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 10px;
+}
+
+.side-section::-webkit-scrollbar-track {
+    background: #181818;
+}
+
+.option-icon3 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.option-icon3 .icons {
+    display: grid;
+    grid-template-columns: 40px auto;
+    gap: 10px;
+    padding: 5px 0;
+}
+
+@media (max-width: 768px) {
+    .side-section {
+        width: 200px;
+    }
+
+    .icons img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .icons p {
+        font-size: 13px;
+    }
 }

@@ -1,13 +1,17 @@
 *{
     margin: 0;
     padding: 0;
-    color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif  ;
 }
-.contain{
+body{
+    color: white;
     background-color: #181818;
+    overflow-x: hidden;
+    background-color: white;
+}
+.contain{
     display: flex;
-    height: 150vh;
+    height: 100%;
 }
 .page1{
     display: flex;
@@ -17,7 +21,7 @@
 .page{
     display: flex;
     flex-direction: column;
-    margin-left: 260px;
+    margin-left: 248px;
 }
 .head{
     position: fixed;

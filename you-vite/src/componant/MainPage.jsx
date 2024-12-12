@@ -1,43 +1,45 @@
-import { useEffect } from "react";
-import { useState } from "react";
-
-function MainPage(){
-    
-    const getPosts = async () => {
-        const response = await fetch("https://spotify-with-react.onrender.com/vedio", {
-            method : "GET"
-        });
-        return response.json();
-    }
-    const [data,setData] = useState([]);
-
-    useEffect(() => {
-        getPosts().then((Posts) => setData(Posts))
-    },[])
-
-    return(
+function MainPage({ videos, handleVideoClick, selectedVideo, setSelectedVideo,setSelectedValue}) {
+  return (
     <>
-    <div className="main">
-    <div className="box">
-            {data.map((i)=>(
-                <div key={i.id} className="flex">
-                    <img src={i.url} alt="#"></img>
-                    <div className="tittle">
-                        <img src={i.url2} alt="" />
-                        <p>{i.dis}</p>
-                    </div>
-                    <div className="info">
-                        <p>{i.channel}
-                            <img src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/verified.png" alt="#" />
-                        </p>
-                        <pre>{i.view}  {i.days}</pre>
-                    </div>
-                </div>
-            ))}
-    </div>
-    </div>
+      <div className="num">
+        <input type="radio" name="choice" value="10" defaultChecked onChange={(e) => setSelectedValue(parseInt(e.target.value))}/> 10
+        <input type="radio" name="choice" value="20" onChange={(e) => setSelectedValue(parseInt(e.target.value))}/> 20
+        <input type="radio" name="choice" value="30" onChange={(e) => setSelectedValue(parseInt(e.target.value))}/> 30
+        <input type="radio" name="choice" value="40" onChange={(e) => setSelectedValue(parseInt(e.target.value))}/> 40
+      </div>
+
+      {selectedVideo && (
+        <div className="video-player">
+          <iframe
+            src={selectedVideo}
+            title="Selected Video"
+            width="1100px"
+            height="500px"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+          <button onClick={() => setSelectedVideo(null)}>Close</button>
+        </div>
+      )}
+
+      <div className="main">
+        <div className="box">
+          {videos.map((video) => (
+            <div key={video.id} onClick={() => handleVideoClick(video)}>
+              <div className="ve">
+                <img src={video.thumbnail} alt={video.title} />
+              </div>
+              <div className="write">
+                <h3>{video.title}</h3>
+                <p>{video.description}</p>
+                <small>{video.channel}</small>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </>
-    )
+  );
 }
 
 export default MainPage;
