@@ -13,7 +13,7 @@ function Mainpage(){
 
 
     const getPosts = async () => {
-        const response = await fetch("http://localhost:3000/singers",{
+        const response = await fetch("https://spotify-backend-qplt.onrender.com",{
             method : "GET",
         })
         return response.json();

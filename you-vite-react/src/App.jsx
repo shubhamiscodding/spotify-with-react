@@ -14,7 +14,7 @@ function App() {
   const [selectedValue, setSelectedValue] = useState(10);
   const [selectedContent, setSelectedContent] = useState("Home");
 
-  const apiKey = "AIzaSyCdJfCOyF9TM1wPRSJb4UdSNFCXW3nR73U";
+  const apiKey = "";
   // AIzaSyCdJfCOyF9TM1wPRSJb4UdSNFCXW3nR73U
 
   const fetchVideos = (query = "") => {
